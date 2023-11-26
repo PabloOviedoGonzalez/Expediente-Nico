@@ -1,45 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    private bool Gamepaused = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Comprueba que el juego no esté pausado al inicio
-        Time.timeScale = 1f;
-    }
+    //[SerializeField] private GameObject botonpausa;
+    [SerializeField] private GameObject pausemenu;
 
-    void Update()
+    public void Update()
     {
-        // Verificar si se presiona la tecla Escape para pausar o reanudar el juego
+        Cursor.lockState = CursorLockMode.None; // Bloquear el cursor del mouse.
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Gamepaused)
-            {
-                Resumed();
-            }
-            else
-            {
-                Paused();
-            }
+            Time.timeScale = 0f;
+            pausemenu.SetActive(true);
         }
     }
-
-    void Paused()
+    public void reanudar()
     {
-        Gamepaused = true;
-        Time.timeScale = 0f; // Detener el tiempo para pausar el juego
+        Time.timeScale = 1f;
+        pausemenu.SetActive(false);
     }
 
-    public void Resumed()
+    public void reiniciar()
     {
-        Gamepaused = false;
-        Time.timeScale = 1f; // Reanudar el tiempo
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("HabitaciónNiño");
+    }
+
+    public void Salir()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
-
