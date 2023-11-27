@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class BottonsFuncions : MonoBehaviour
 {
-    public void ChangeScene(string name)
+    public void ChangeScene(string PasilloMorgue)
     {
-        GameManager.instance.ChangeScene(name);
+        GameManager.instance.ChangeScene(PasilloMorgue);
         
     }
 
