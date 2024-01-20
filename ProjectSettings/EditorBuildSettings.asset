@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ajedrez.unity
     guid: 03c6c32fa1ce9e14c933f8ff00e4776b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Finish.unity
     guid: d01d56dc4b81a2645bf6644843a3c471
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Habitaci\xF3nNi\xF1o.unity"
     guid: 6bd1a862e5f94fc45b22cf0932740bf4
   - enabled: 1
