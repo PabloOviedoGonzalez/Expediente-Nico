@@ -24,7 +24,7 @@ public class Inventory : MonoBehaviour
                 if (Bag[i].GetComponent<Image>().enabled == false) //comprueba si algun objeto tiene su img desactivado
                 {
                     Bag[i].GetComponent<Image>().enabled = true;//si es así, se activara
-                    Bag[i].GetComponent<Image>().enabled = coll.GetComponent<SpriteRenderer>().sprite;//aparece la imagen
+                    Bag[i].GetComponent<Image>().enabled = coll.GetComponent<Image>();//aparece la imagen
                     break; //para que no se repita hasta que volvamos a tocar el objeto
                 }
             }
