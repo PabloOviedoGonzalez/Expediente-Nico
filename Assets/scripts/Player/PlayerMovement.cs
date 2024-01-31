@@ -10,17 +10,22 @@ public class PlayerMovement : MonoBehaviour
     public float gravityForce = -9.81f; //fuerza de la gravedad para este obj
     public float jumpForce = 20f; //fuerza de salto
     private float playerYVelocity; //currentVelocidad en y del player
-    private CharacterController controller;
+    public CharacterController controller;
     private Animator animator;
     private bool isSneaking = false;
-    // Start is called before the first frame update
+    //pasos
+    public AudioSource steps;
+    private bool Vactive; //vertical activo
+    private bool Hactive; //horizontal activo
+
+    
     void Start()
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         float x = Input.GetAxis("Horizontal");
@@ -63,6 +68,40 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(movementVector * Time.deltaTime);
 
+        //sonidos pasos
+        if (Input.GetButtonDown("Horizontal"))
+        {
+            if(Vactive == false)
+            {
+                Hactive = true;
+                steps.Play();
+            }
+        }
+        if (Input.GetButtonDown("Vertical"))              
+        {
+            if(Hactive  == false)
+            {
+                Vactive = true;
+                steps.Play();
+            }
+        }
+        if (Input.GetButtonUp("Horizontal")) 
+        {
+            Hactive= false;
+            if(Vactive==false) //tampoco se tienen que estar presionando las verticales
+            {
+                steps.Pause();
+            }
+            
+        }
+        if (Input.GetButtonUp("Vertical"))
+        {
+            Vactive=false;
+            if (Hactive == false) //tampoco se tienen que estar presionando las horizontales
+            {
+                steps.Pause();
+            }
+        }
     }
 }
 
