@@ -3269,7 +3269,7 @@ VideoPlayer:
   m_DataSource: 0
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
+  m_AudioOutputMode: 0
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
@@ -22091,7 +22091,7 @@ GameObject:
   - component: {fileID: 7762067042820722220}
   - component: {fileID: 8707273952612969519}
   m_Layer: 0
-  m_Name: Cube.001
+  m_Name: TeleAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22109,7 +22109,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4666a2ae87eae474a99edad89cb4d56f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.925
+  m_Volume: 0.742
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -22117,8 +22117,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1.2
-  MaxDistance: 2.5
+  MinDistance: 0.58
+  MaxDistance: 1.66
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
