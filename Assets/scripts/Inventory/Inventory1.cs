@@ -55,8 +55,10 @@ public class Inventory1 : MonoBehaviour
     }
 
     // Método para eliminar un elemento del inventario
+    /*
     public void Remove(Item item)
     {
         items.Remove(item);
     }
+    */
 }
