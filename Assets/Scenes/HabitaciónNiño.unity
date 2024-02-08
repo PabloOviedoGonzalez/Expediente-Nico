@@ -7781,6 +7781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausemenu: {fileID: 537812020}
+  optionsmenu: {fileID: 1220209476}
 --- !u!114 &380054784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9393,7 +9394,7 @@ GameObject:
   - component: {fileID: 537812022}
   m_Layer: 5
   m_Name: pausemenu
-  m_TagString: Untagged
+  m_TagString: PauseMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19801,7 +19802,7 @@ GameObject:
   - component: {fileID: 1220209478}
   m_Layer: 5
   m_Name: OptionsPanel
-  m_TagString: Untagged
+  m_TagString: OptionsMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

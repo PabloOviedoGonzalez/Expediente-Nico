@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pausemenu;
+    [SerializeField] private GameObject optionsmenu;
 
     private string currentSceneName;
 
-    public static PauseMenu instance;
 
     void Start()
     {
@@ -17,27 +17,37 @@ public class PauseMenu : MonoBehaviour
         currentSceneName = SceneManager.GetActiveScene().name;
     }
 
-    void Awake() // se hace en el awake para q se inicialice lo primero, por si en el start hubiera algo q lo use y lo usase antes de q se iniciase
+    public void Update()
     {
-        if (instance == null)//comprueba si instance no contiene informacion. tambien hace q no se destruya nunca
+        // Comprobar si OptionsPanel está activo para evitar abrir el PauseMenu
+        if (!optionsmenu.activeSelf)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            //si tiene info, significa q ya existe otro GameManager y destruye este para q no se duplique ya q solo puede haber uno
-            Destroy(gameObject);
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (Time.timeScale == 0f)
+                {
+                    // Si el PauseMenu está activo, ocultar el cursor
+                    Cursor.lockState = CursorLockMode.Locked;
+                }
+                else
+                {
+                    // Si el PauseMenu no está activo, mostrar el cursor
+                    Cursor.lockState = CursorLockMode.None;
+                }
+
+                TogglePauseMenu();
+            }
         }
     }
 
-    public void Update()
+    void TogglePauseMenu()
     {
-        //Si el pausemenu esta abierto que salaga el cursor del mouse sino lo esta desaparezca
-        //Si OptionsPanel esta activo, no se abara el pause menu al darle al escape sino que vuelva atras
-        Cursor.lockState = CursorLockMode.None; // Bloquear el cursor del mouse.
-
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (pausemenu.activeSelf)
+        {
+            Time.timeScale = 1f;
+            pausemenu.SetActive(false);
+        }
+        else
         {
             Time.timeScale = 0f;
             pausemenu.SetActive(true);
@@ -52,9 +62,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        //que al reiniciar me cierre el menu
         Time.timeScale = 1f;
         SceneManager.LoadScene(currentSceneName);
+        pausemenu.SetActive(false);
     }
 
     public void QuitMainMenu()
