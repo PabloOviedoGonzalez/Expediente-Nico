@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.644
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03960419, g: 0.050482787, b: 0.07900325, a: 0.644}
+  m_IndirectSpecularColor: {r: 0.039604183, g: 0.050482288, b: 0.07900369, a: 0.644}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7017,7 +7017,7 @@ GameObject:
   - component: {fileID: 259466494}
   - component: {fileID: 259466493}
   m_Layer: 5
-  m_Name: Reanudar
+  m_Name: Reload
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7087,9 +7087,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 380054783}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: reanudar
+        m_MethodName: Reload
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8557,7 +8557,7 @@ GameObject:
   - component: {fileID: 487357015}
   - component: {fileID: 487357014}
   m_Layer: 5
-  m_Name: Reiniciar
+  m_Name: Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8627,9 +8627,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 380054783}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: reiniciar
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16924,7 +16924,7 @@ GameObject:
   - component: {fileID: 857056174}
   - component: {fileID: 857056173}
   m_Layer: 5
-  m_Name: Opciones
+  m_Name: Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19800,7 +19800,7 @@ GameObject:
   - component: {fileID: 1220209479}
   - component: {fileID: 1220209478}
   m_Layer: 5
-  m_Name: ' Panel Opciones'
+  m_Name: OptionsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25696,7 +25696,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Opciones
+  m_text: 'Opciones
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26778,7 +26780,7 @@ GameObject:
   - component: {fileID: 1474753558}
   - component: {fileID: 1474753557}
   m_Layer: 5
-  m_Name: Salir
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26848,9 +26850,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 380054783}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Salir
+        m_MethodName: QuitMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
