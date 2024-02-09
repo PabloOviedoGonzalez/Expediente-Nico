@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class InteractableText : MonoBehaviour
 {
     [SerializeField] private MonoBehaviour componentToActivate;
+    public VideoPlayer videoPlayer;
 
     void Start()
     {
+        // Asignar el evento cuando el video termine
+        videoPlayer.loopPointReached += OnVideoFinished;
+
         if (componentToActivate != null)
         {
             componentToActivate.enabled = false;
@@ -20,8 +25,9 @@ public class InteractableText : MonoBehaviour
         // Verificar si el componente está activado y la tecla "E" ha sido presionada
         if (componentToActivate != null && componentToActivate.enabled && Input.GetKeyDown(KeyCode.E))
         {
-            // Cambiar a la escena especificada
-            ChangeScene();
+
+            // Reproducir el video al inicio
+            PlayVideo();
         }
     }
 
@@ -51,10 +57,16 @@ public class InteractableText : MonoBehaviour
         }
     }
 
-    private void ChangeScene()
+    void OnVideoFinished(VideoPlayer vp)
     {
-        // Cambiar a la escena especificada
+        // Cambiar a la siguiente escena cuando el video termine
         SceneManager.LoadScene("PCScene");
+    }
+
+    void PlayVideo()
+    {
+        // Iniciar la reproducción del video
+        videoPlayer.Play();
     }
 }
 
