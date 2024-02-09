@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
+using UnityEngine.UI;
 
 public class InteractableText : MonoBehaviour
 {
     [SerializeField] private MonoBehaviour componentToActivate;
     public VideoPlayer videoPlayer;
+    public RenderTexture renderTexture;
+
+    // Añade una referencia al script RawImageScript en el Inspector
+    public RawImageScript rawImageScript;
 
     void Start()
     {
@@ -18,6 +23,11 @@ public class InteractableText : MonoBehaviour
         {
             componentToActivate.enabled = false;
         }
+
+        if (rawImageScript == null)
+        {
+            Debug.LogError("No se ha asignado el script RawImageScript en el Inspector.");
+        }
     }
 
     void Update()
@@ -25,9 +35,14 @@ public class InteractableText : MonoBehaviour
         // Verificar si el componente está activado y la tecla "E" ha sido presionada
         if (componentToActivate != null && componentToActivate.enabled && Input.GetKeyDown(KeyCode.E))
         {
-
             // Reproducir el video al inicio
             PlayVideo();
+
+            // Ejecutar el método LoadVideoCanvas del script RawImageScript
+            if (rawImageScript != null)
+            {
+                rawImageScript.LoadVideoCanvas();
+            }
         }
     }
 
@@ -69,4 +84,3 @@ public class InteractableText : MonoBehaviour
         videoPlayer.Play();
     }
 }
-
