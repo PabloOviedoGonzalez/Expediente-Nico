@@ -21,9 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PasilloMorgue.unity
     guid: 00e61b3f3dbdce241af67b71a203c5bd
   - enabled: 1
-    path: Assets/Scenes/PCScene.unity
+    path: Assets/Scenes/Pcpassword.unity
     guid: 3207fd6f6e5b8264b9cadced5195f18f
   - enabled: 1
-    path: Assets/Scenes/PCMainScene.unity
+    path: Assets/Scenes/Pcdesktop.unity
     guid: 409fb4b81913afd4cb646a4cab769140
   m_configObjects: {}

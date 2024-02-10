@@ -75,7 +75,7 @@ public class InteractableText : MonoBehaviour
     void OnVideoFinished(VideoPlayer vp)
     {
         // Cambiar a la siguiente escena cuando el video termine
-        SceneManager.LoadScene("PCScene");
+        SceneManager.LoadScene("Pcpassword");
     }
 
     void PlayVideo()
@@ -83,4 +83,5 @@ public class InteractableText : MonoBehaviour
         // Iniciar la reproducción del video
         videoPlayer.Play();
     }
+
 }

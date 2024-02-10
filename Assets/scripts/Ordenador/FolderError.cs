@@ -23,7 +23,7 @@ public class FolderError : MonoBehaviour
     }
 
     // Método que se llamará al hacer clic en el segundo botón para desactivar la imagen
-    public void DeactivateErrorImage()
+    public void DesactivateErrorImage()
     {
         if (imageError != null)
         {
