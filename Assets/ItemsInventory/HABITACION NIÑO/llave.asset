@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: llave
   m_EditorClassIdentifier: 
   name: llave
-  icon: {fileID: 0}
+  icon: {fileID: -1232503299, guid: f22d2344923a7734ea587d2770b5687a, type: 3}
   isDefaultItem: 0

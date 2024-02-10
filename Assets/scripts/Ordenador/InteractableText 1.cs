@@ -7,42 +7,22 @@ using UnityEngine.UI;
 
 public class InteractableText : MonoBehaviour
 {
-    [SerializeField] private MonoBehaviour componentToActivate;
-    public VideoPlayer videoPlayer;
-    public RenderTexture renderTexture;
-
-    // Añade una referencia al script RawImageScript en el Inspector
-    public RawImageScript rawImageScript;
+    [SerializeField] private MonoBehaviour Textofcomputer;
 
     void Start()
     {
-        // Asignar el evento cuando el video termine
-        videoPlayer.loopPointReached += OnVideoFinished;
-
-        if (componentToActivate != null)
+        if (Textofcomputer != null)
         {
-            componentToActivate.enabled = false;
-        }
-
-        if (rawImageScript == null)
-        {
-            Debug.LogError("No se ha asignado el script RawImageScript en el Inspector.");
+            Textofcomputer.enabled = false;
         }
     }
 
     void Update()
     {
         // Verificar si el componente está activado y la tecla "E" ha sido presionada
-        if (componentToActivate != null && componentToActivate.enabled && Input.GetKeyDown(KeyCode.E))
+        if (Textofcomputer != null && Textofcomputer.enabled && Input.GetKeyDown(KeyCode.E))
         {
-            // Reproducir el video al inicio
-            PlayVideo();
-
-            // Ejecutar el método LoadVideoCanvas del script RawImageScript
-            if (rawImageScript != null)
-            {
-                rawImageScript.LoadVideoCanvas();
-            }
+            
         }
     }
 
@@ -52,9 +32,9 @@ public class InteractableText : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Activar el componente especificado en el inspector
-            if (componentToActivate != null)
+            if (Textofcomputer != null)
             {
-                componentToActivate.enabled = true;
+                Textofcomputer.enabled = true;
             }
         }
     }
@@ -65,23 +45,11 @@ public class InteractableText : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Desactivar el componente especificado en el inspector
-            if (componentToActivate != null)
+            if (Textofcomputer != null)
             {
-                componentToActivate.enabled = false;
+                Textofcomputer.enabled = false;
             }
         }
-    }
-
-    void OnVideoFinished(VideoPlayer vp)
-    {
-        // Cambiar a la siguiente escena cuando el video termine
-        SceneManager.LoadScene("Pcpassword");
-    }
-
-    void PlayVideo()
-    {
-        // Iniciar la reproducción del video
-        videoPlayer.Play();
     }
 
 }
