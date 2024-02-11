@@ -48,8 +48,6 @@ public class InteractableText : MonoBehaviour
         // Verificar si el componente está activado y la tecla "E" ha sido presionada
         if (Textofcomputer != null && Textofcomputer.enabled && Input.GetKeyDown(KeyCode.E))
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
             SceneManager.LoadScene("Pcpassword");
            
         }
