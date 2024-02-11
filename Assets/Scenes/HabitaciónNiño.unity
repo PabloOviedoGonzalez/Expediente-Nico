@@ -16855,7 +16855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbd1d22cd11ed27449c3d3fa511dd900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1.5
+  radius: 1.6
   interactionTransform: {fileID: 829792471}
   TextObject: {fileID: 703910288}
   item: {fileID: 11400000, guid: b37a8abe29bd9e249911901aae1dd53e, type: 2}
@@ -24530,7 +24530,6 @@ GameObject:
   - component: {fileID: 1241461418}
   - component: {fileID: 1241461417}
   - component: {fileID: 1241461416}
-  - component: {fileID: 1241461415}
   m_Layer: 0
   m_Name: OptionsController
   m_TagString: Untagged
@@ -24538,18 +24537,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1241461415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241461414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9d39c0b864450d46917a7046490e922, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1241461416
 MonoBehaviour:
   m_ObjectHideFlags: 0

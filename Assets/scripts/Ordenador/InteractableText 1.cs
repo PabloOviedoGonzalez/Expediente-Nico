@@ -17,15 +17,6 @@ public class InteractableText : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        // Verificar si el componente está activado y la tecla "E" ha sido presionada
-        if (Textofcomputer != null && Textofcomputer.enabled && Input.GetKeyDown(KeyCode.E))
-        {
-            
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         // Comprobar si el objeto que entró en el trigger es el jugador (ajustar según tus necesidades)
@@ -49,6 +40,18 @@ public class InteractableText : MonoBehaviour
             {
                 Textofcomputer.enabled = false;
             }
+        }
+    }
+
+    void Update ()
+    {
+        // Verificar si el componente está activado y la tecla "E" ha sido presionada
+        if (Textofcomputer != null && Textofcomputer.enabled && Input.GetKeyDown(KeyCode.E))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            SceneManager.LoadScene("Pcpassword");
+           
         }
     }
 
