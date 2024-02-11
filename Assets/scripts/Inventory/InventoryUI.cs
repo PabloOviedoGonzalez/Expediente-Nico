@@ -6,7 +6,7 @@ public class InventoryUI : MonoBehaviour
 {
     // La referencia al padre que contendrá los slots del inventario en la interfaz gráfica.
     public Transform itemsParents;
-
+    public GameObject inventoryUI;
     // Referencia al objeto de inventario.
     Inventory1 inventory;
 
@@ -26,6 +26,13 @@ public class InventoryUI : MonoBehaviour
         slots = itemsParents.GetComponentsInChildren<InventorySlot>();
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Inventory"))
+        {
+            inventoryUI.SetActive(inventoryUI.activeSelf);
+        }
+    }
     // Método que se llama cuando hay un cambio en el inventario para actualizar la interfaz gráfica.
     void UpdateUI()
     {

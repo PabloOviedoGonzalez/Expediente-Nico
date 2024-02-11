@@ -6795,7 +6795,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6017122058291386774, guid: 4388f335e04169d45a747d9a8fff0774, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -7908,6 +7909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsParents: {fileID: 290381008}
+  inventoryUI: {fileID: 0}
 --- !u!1001 &386383754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17344,6 +17346,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857056171}
   m_CullTransparentMesh: 1
+--- !u!114 &860847134 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7856671687978740530, guid: 4388f335e04169d45a747d9a8fff0774, type: 3}
+  m_PrefabInstance: {fileID: 240248388}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91aca0bd36bd1a54fae644a839af43a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &867885610
 GameObject:
   m_ObjectHideFlags: 0
@@ -19374,7 +19387,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1170456289}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1170456288}
+        m_TargetAssemblyTypeName: InventorySlot, Assembly-CSharp
+        m_MethodName: UseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1180655186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25729,6 +25754,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1308356794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4535210567063784300, guid: 4388f335e04169d45a747d9a8fff0774, type: 3}
+  m_PrefabInstance: {fileID: 240248388}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308356786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7946956eb84f54448ad8ffee4256308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1308356797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25742,6 +25778,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 1251482266}
+  scriptsToDisable:
+  - {fileID: 860847134}
+  - {fileID: 1308356794}
+  scriptsToEnable:
+  - {fileID: 860847134}
+  - {fileID: 1308356794}
 --- !u!1 &1314437140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5538d1397aa6a4f4dae5937aa54cd6e5, type: 3}
@@ -29257,7 +29299,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1808689631}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1170456288}
+        m_TargetAssemblyTypeName: InventorySlot, Assembly-CSharp
+        m_MethodName: OnRemoveButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1824757765
 GameObject:
   m_ObjectHideFlags: 0
