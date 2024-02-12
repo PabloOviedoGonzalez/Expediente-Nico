@@ -18,7 +18,7 @@ public class VideoSceneTransition : MonoBehaviour
     void OnVideoFinished(VideoPlayer vp)
     {
         // Cambiar a la siguiente escena cuando el video termine
-        SceneManager.LoadScene("PCScene");
+        SceneManager.LoadScene("Pcpasssword");
     }
 
     void PlayVideo()

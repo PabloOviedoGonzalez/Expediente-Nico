@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 
-public class RawImageScript : MonoBehaviour
+public class Rawimage2 : MonoBehaviour
 {
     public RawImage canvasToActivate;  // Asigna el componente RawImage en el Inspector
     public VideoPlayer videoplayer;
@@ -39,8 +39,6 @@ public class RawImageScript : MonoBehaviour
     private void OnVideoEnd(VideoPlayer vp)
     {
         // Cambiar a la siguiente escena
-        SceneManager.LoadScene("Pcpassword");
+        SceneManager.LoadScene("HabitaciónNiño");
     }
 }
-
-

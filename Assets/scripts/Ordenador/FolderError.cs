@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class FolderError : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class FolderError : MonoBehaviour
 
     public void ErrorVideoNico()
     {
-
+        SceneManager.LoadScene("Pantallacarga2");
     }
 }
 
