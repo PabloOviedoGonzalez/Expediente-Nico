@@ -14,6 +14,11 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private bool isSneaking = false;
 
+    //pasos
+    public AudioSource steps;
+    private bool Vactive; //vertical activo
+    private bool Hactive; //horizontal activo
+
     // Objeto interactuable actualmente enfocado
     private Interactable focus;
 
@@ -76,8 +81,43 @@ public class PlayerMovement : MonoBehaviour
         // Mover el controlador de personaje
         controller.Move(movementVector * Time.deltaTime);
 
-        // Lanzar un rayo hacia adelante desde la cámara para interactuar con objetos
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //sonidos pasos
+        if (Input.GetButtonDown("Horizontal"))
+        {
+            if (Vactive == false)
+            {
+                Hactive = true;
+                steps.Play();
+            }
+        }
+        if (Input.GetButtonDown("Vertical"))
+        {
+            if (Hactive == false)
+            {
+                Vactive = true;
+                steps.Play();
+            }
+        }
+        if (Input.GetButtonUp("Horizontal"))
+        {
+            Hactive = false;
+            if (Vactive == false) //tampoco se tienen que estar presionando las verticales
+            {
+                steps.Pause();
+            }
+
+        }
+        if (Input.GetButtonUp("Vertical"))
+        {
+            Vactive = false;
+            if (Hactive == false) //tampoco se tienen que estar presionando las horizontales
+            {
+                steps.Pause();
+            }
+        }
+    
+// Lanzar un rayo hacia adelante desde la cámara para interactuar con objetos
+Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, 100))
