@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,11 +52,6 @@ public class Inventory1 : MonoBehaviour
         }
 
         return true;
-    }
-
-    internal void Remove(Item item)
-    {
-        throw new NotImplementedException();
     }
 
     // Método para eliminar un elemento del inventario

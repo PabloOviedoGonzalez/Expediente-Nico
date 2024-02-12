@@ -15,13 +15,5 @@ public class Item : ScriptableObject
     // Indica si el objeto es predeterminado en el inventario (puede ser modificado desde el Inspector de Unity)
     public bool isDefaultItem = false;
 
-    public virtual void Use()
-    {
-        //Usar el item
-        //Que pasa al usar el objeto
-
-        Debug.Log("Using" + name);
-    }
-
 }
 

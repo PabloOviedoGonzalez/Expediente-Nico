@@ -3,44 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
-using UnityEngine.SceneManagement;
 
 public class RawImageScript : MonoBehaviour
 {
-    public RawImage canvasToActivate;  // Asigna el componente RawImage en el Inspector
+    public RawImage canvasToActivate;  // Asigna el componente Canvas en el Inspector
     public VideoPlayer videoplayer;
 
     void Start()
     {
-        // Suscribirse al evento de finalización del video
-        videoplayer.loopPointReached += OnVideoEnd;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Puedes realizar alguna configuración inicial si es necesario
     }
 
     public void LoadVideoCanvas()
     {
-        // Verificar si se asignó un componente RawImage y VideoPlayer en el Inspector
-        if (canvasToActivate != null && videoplayer != null)
+        // Verificar si se asignó un componente Canvas en el Inspector
+        if (canvasToActivate != null)
         {
-            // Activar el componente RawImage
+            // Activar el componente Canvas
             canvasToActivate.enabled = true;
-
-            // Reproducir el video
-            videoplayer.Play();
+            videoplayer.enabled = true;
         }
         else
         {
-            Debug.LogError("No se han asignado el componente RawImage o VideoPlayer en el Inspector.");
+            Debug.LogError("No se ha asignado el componente Canvas en el Inspector.");
         }
     }
-
-    // Método llamado cuando el video llega al final
-    private void OnVideoEnd(VideoPlayer vp)
-    {
-        // Cambiar a la siguiente escena
-        SceneManager.LoadScene("Pcpassword");
-    }
 }
-
 

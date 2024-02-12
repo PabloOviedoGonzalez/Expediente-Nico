@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
-using UnityEngine.SceneManagement;
 
 public class FolderError : MonoBehaviour
 {
@@ -24,7 +23,7 @@ public class FolderError : MonoBehaviour
     }
 
     // Método que se llamará al hacer clic en el segundo botón para desactivar la imagen
-    public void DesactivateErrorImage()
+    public void DeactivateErrorImage()
     {
         if (imageError != null)
         {
@@ -43,7 +42,7 @@ public class FolderError : MonoBehaviour
 
     public void ErrorVideoNico()
     {
-        SceneManager.LoadScene("Pantallacarga2");
+
     }
 }
 
