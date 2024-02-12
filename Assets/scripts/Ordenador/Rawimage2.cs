@@ -39,6 +39,6 @@ public class Rawimage2 : MonoBehaviour
     private void OnVideoEnd(VideoPlayer vp)
     {
         // Cambiar a la siguiente escena
-        SceneManager.LoadScene("HabitaciónNiño");
+        SceneManager.LoadScene("HNiño2");
     }
 }

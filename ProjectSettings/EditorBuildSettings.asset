@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PantallaCarga2.unity
     guid: 3baaa917789cadb48a4220cbc2eae6d8
+  - enabled: 1
+    path: "Assets/Scenes/HNi\xF1o2.unity"
+    guid: d3a3514ea486cb4458677a3fe349bcf4
   m_configObjects: {}
