@@ -12,6 +12,7 @@ public class Shutdown : MonoBehaviour
     }
     public void ChangeToChildRoomScene()
     {
+        FindObjectOfType<NoSe>().ToggleGOs(true);
         SceneManager.LoadScene("HabitaciónNiño");
     }
 }
