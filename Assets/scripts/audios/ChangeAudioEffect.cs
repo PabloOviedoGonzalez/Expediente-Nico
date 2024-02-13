@@ -7,7 +7,6 @@ public class ChangeAudioEffect : MonoBehaviour
     public AudioClip StepClip;
     public GameObject player;
     
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
