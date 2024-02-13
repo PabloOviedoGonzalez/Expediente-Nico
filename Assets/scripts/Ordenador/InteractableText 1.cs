@@ -11,6 +11,7 @@ public class InteractableText : MonoBehaviour
 
     void Start()
     {
+         
         if (Textofcomputer != null)
         {
             Textofcomputer.enabled = false;
@@ -48,8 +49,11 @@ public class InteractableText : MonoBehaviour
         // Verificar si el componente está activado y la tecla "E" ha sido presionada
         if (Textofcomputer != null && Textofcomputer.enabled && Input.GetKeyDown(KeyCode.E))
         {
+            NoSe master = FindObjectOfType<NoSe>();
             SceneManager.LoadScene("Pantallacarga1");
-           
+            master.ToggleGOs(false);
+            NoSe.instance = master;
+            
         }
     }
 

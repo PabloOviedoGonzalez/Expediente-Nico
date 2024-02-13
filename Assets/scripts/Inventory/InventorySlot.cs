@@ -19,10 +19,12 @@ public class InventorySlot : MonoBehaviour
         item = newItem;
 
         // Configura el sprite del icono con el sprite del elemento.
-        icon.sprite = item.icon;
+        if (icon)
+            icon.sprite = item.icon;
 
         // Hace visible el icono.
-        icon.enabled = true;
+        if(icon)
+            icon.enabled = true;
 
         //removeButton.interactable = true;
     }
@@ -30,12 +32,16 @@ public class InventorySlot : MonoBehaviour
     // Método que se llama para limpiar el contenido del slot.
     public void ClearSlot()
     {
+        // Elimina el sprite del icono y lo hace invisible.
+        if (icon)
+        {
+            icon.sprite = null;
+            icon.enabled = false;
+        }
+
         // Elimina la referencia al elemento en el slot.
         item = null;
 
-        // Elimina el sprite del icono y lo hace invisible.
-        icon.sprite = null;
-        icon.enabled = false;
         //removeButton.interactable = false;
     }
     /*public void OnRemoveButton()

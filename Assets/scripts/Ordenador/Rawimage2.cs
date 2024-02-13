@@ -39,6 +39,8 @@ public class Rawimage2 : MonoBehaviour
     private void OnVideoEnd(VideoPlayer vp)
     {
         // Cambiar a la siguiente escena
+        GameManager.instance.passChecked = true;
+        FindObjectOfType<NoSe>().ToggleGOs(true);
         SceneManager.LoadScene("HabitaciónNiño");
     }
 }

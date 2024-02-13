@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public AudioClip nombre;
     [Range(0, 1)]
     public float nombreVolume;
-
+    public bool passChecked = false;
    
 
     private float time = 0;
