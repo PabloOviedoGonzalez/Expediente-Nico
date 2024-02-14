@@ -18,7 +18,7 @@ public class PasswordCheck : MonoBehaviour
     public void CheckPassword()
     {
         // Comprueba si el texto del InputField es igual a "Nico1"
-        if (passwordInputField.text == "Nico1")
+        if (passwordInputField.text == "Jake")
         {
             // Cambia a la escena "PCMainScene" si la contraseña es correcta
             SceneManager.LoadScene("Pcdesktop");

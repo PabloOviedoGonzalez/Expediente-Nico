@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
 
     public void iniciar()
     {
-        SceneManager.LoadScene("HabitaciónNiño");
+        SceneManager.LoadScene("PasilloMorgue");
     }
 
     public void Salir()

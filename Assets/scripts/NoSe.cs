@@ -29,17 +29,17 @@ public class NoSe : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            ToggleGOs(false);
-            instance = this;
-            GameManager.instance.ChangeScene("Pcdesktop");
-        }
-        else if (Input.GetKeyDown(KeyCode.Y))
-        {
-            ToggleGOs(true);
-            GameManager.instance.ChangeScene("HabitaciónNiño");
-        }
+        //if (Input.GetKeyDown(KeyCode.G))
+        //{
+        //    ToggleGOs(false);
+        //    instance = this;
+        //    GameManager.instance.ChangeScene("Pcdesktop");
+        //}
+        //else if (Input.GetKeyDown(KeyCode.Y))
+        //{
+        //    ToggleGOs(true);
+        //    GameManager.instance.ChangeScene("HabitaciónNiño");
+        //}
     }
 
     public void ToggleGOs(bool activate)

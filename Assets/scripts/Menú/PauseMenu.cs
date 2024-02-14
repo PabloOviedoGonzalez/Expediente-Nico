@@ -26,13 +26,15 @@ public class PauseMenu : MonoBehaviour
             {
                 if (Time.timeScale == 0f)
                 {
-                    // Si el PauseMenu está activo, ocultar el cursor
-                    Cursor.lockState = CursorLockMode.Locked;
+                    // Si el PauseMenu está activo,
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
                 else
                 {
-                    // Si el PauseMenu no está activo, mostrar el cursor
+                    // Si el PauseMenu no está activo
                     Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
 
                 TogglePauseMenu();
@@ -46,11 +48,15 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 1f;
             pausemenu.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         else
         {
             Time.timeScale = 0f;
             pausemenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 

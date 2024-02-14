@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Trozo de papel
   m_EditorClassIdentifier: 
   name: Trozo papel
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: e715f02a74bcf52498206b1c5de6e72e, type: 3}
   isDefaultItem: 0
