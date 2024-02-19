@@ -22,6 +22,15 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("HabitaciónNiño");
     }
 
+    public void back()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void credits()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
     public void Salir()
     {
         Application.Quit();
