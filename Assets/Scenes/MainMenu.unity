@@ -1307,6 +1307,7 @@ GameObject:
   - component: {fileID: 1420988637}
   - component: {fileID: 1420988636}
   - component: {fileID: 1420988635}
+  - component: {fileID: 1420988638}
   m_Layer: 5
   m_Name: Jugar
   m_TagString: Untagged
@@ -1428,6 +1429,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420988633}
   m_CullTransparentMesh: 1
+--- !u!114 &1420988638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420988633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a195f16f2bad04397e1849922cd3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 8494671b1f0cb5f4ba528c60d4fee4d0, type: 3}
 --- !u!1 &1553363756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,13 +1600,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817405711}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c33f09ac6a91564f9f4c153e98caad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuAmbientMusic: {fileID: 0}
-  volumeMusic: 0
+  menuAmbientMusic: {fileID: 8300000, guid: e26e7fca17d5dff4e990ec748b101da9, type: 3}
+  volumeMusic: 1
 --- !u!4 &1817405713
 Transform:
   m_ObjectHideFlags: 0
@@ -1798,6 +1812,7 @@ GameObject:
   - component: {fileID: 1947607021}
   - component: {fileID: 1947607020}
   - component: {fileID: 1947607019}
+  - component: {fileID: 1947607022}
   m_Layer: 5
   m_Name: Opciones
   m_TagString: Untagged
@@ -1919,6 +1934,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947607017}
   m_CullTransparentMesh: 1
+--- !u!114 &1947607022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947607017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a195f16f2bad04397e1849922cd3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 8494671b1f0cb5f4ba528c60d4fee4d0, type: 3}
 --- !u!1 &2108547361
 GameObject:
   m_ObjectHideFlags: 0
