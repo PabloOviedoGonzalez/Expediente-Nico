@@ -26,4 +26,18 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Opciones()
+    {
+        SceneManager.LoadScene("Opciones");
+    }
+    public void creditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+    public void Atras()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }
