@@ -7,10 +7,11 @@ public class OnTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<IdentificadorPelota>())
-        {
+       // if (other.GetComponent<IdentificadorPelota>() && other.GetComponent<PlayerMovement>())
+        //{
           Debug.Log("You Win");
-        }
+        GameManager.instance.ChangeScene("Ajedrez");
+        //}
 
     }
     // Start is called before the first frame update
